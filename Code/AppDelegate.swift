@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RecordViewControllerDeleg
         let nav = window?.rootViewController as UINavigationController
         let recordVC = board?.instantiateViewControllerWithIdentifier(ViewControllerStoryboardIdentifier.RecordViewController.rawValue) as RecordViewController
         recordVC.delegate = self
+        recordVC.title = "Recording"
         nav.pushViewController(recordVC, animated: true)
     }
 
@@ -87,7 +88,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RecordViewControllerDeleg
                     success: { (_, asset) in
                         if let asset = asset {
                             asset.processWithSuccess({ () in
-                                MMProgressHUD.dismiss()
+                                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+                                    asset.publishWithSuccess({ () -> Void in
+                                        MMProgressHUD.dismiss()
+
+                                        let web = WebViewController()
+                                        web.title = "Dat Website"
+                                        web.loadURL(NSURL(string: "https://assets.contentful.com/crvcnjrd7aj2/25yupHorJGkey6cuE82EEO/966df7fb945414b77493d81dcc6fe1d2/index.html")!)
+
+                                        let nav = self.window?.rootViewController as UINavigationController
+                                        nav.pushViewController(web, animated: true)
+                                    }, failure: failure)
+                                    return
+                                })
                             }, failure: failure)
                         }
                 }, failure: failure)
