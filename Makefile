@@ -1,4 +1,7 @@
-.PHONY: setup storyboard_ids
+.PHONY: build setup storyboard_ids
+
+build:
+	xcodebuild -workspace Castful.xcworkspace -scheme Castful
 
 setup:
 	bundle install
