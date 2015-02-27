@@ -35,6 +35,7 @@ PODS:
     - EDColor
     - LatoFont
   - EDColor (1.0.0)
+  - EZAudio (0.0.6)
   - ISO8601DateFormatter (0.7)
   - Keys (1.0.1)
   - LatoFont (1.0.0)
@@ -44,6 +45,7 @@ PODS:
 DEPENDENCIES:
   - ContentfulLogin (from `git@github.com:contentful/contentful-ios-login.git`)
   - ContentfulManagementAPI (HEAD)
+  - EZAudio
   - Keys (from `https://github.com/ashfurrow/empty-podspec.git`)
 
 EXTERNAL SOURCES:
@@ -67,6 +69,7 @@ SPEC CHECKSUMS:
   ContentfulManagementAPI: d21051009aa6aaf087076c16dd1f8c5017dfeaa1
   ContentfulStyle: 0f41944b1efd8bba2a8f0c1ac0cf3910b1105949
   EDColor: 1638bf113678826a05855cff095fcec1d887dbb6
+  EZAudio: 2f2e5a5094d29ab91d45b229a75c3c31ee26ed1f
   ISO8601DateFormatter: 59731cd880cf87e71b4fa95f0d6b713dcbc4cbce
   Keys: 93c51d6f790317fd7213ae8bbdd354d3f0009988
   LatoFont: 325a86578945d04cce8039deaf163229c63e2258

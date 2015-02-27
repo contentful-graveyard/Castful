@@ -11,3 +11,4 @@ use_frameworks!
 
 pod 'ContentfulLogin', :git => 'git@github.com:contentful/contentful-ios-login.git'
 pod 'ContentfulManagementAPI', :head
+pod 'EZAudio'
