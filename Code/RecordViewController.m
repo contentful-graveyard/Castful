@@ -84,12 +84,6 @@
   
   // Hide the play button
   self.playButton.hidden = YES;
-  
-  /*
-   Log out where the file is being written to within the app's documents directory
-   */
-  NSLog(@"File written to application sandbox's documents directory: %@",[self testFilePathURL]);
-  
 }
 
 #pragma mark - Actions
@@ -160,7 +154,7 @@
         }
         self.audioPlayer = nil;
     }
-    self.playButton.hidden = NO;
+    //self.playButton.hidden = NO;
     
     if( [sender isOn] )
     {
@@ -174,6 +168,10 @@
     else
     {
         [self.recorder closeAudioFile];
+
+        if ([self.delegate respondsToSelector:@selector(recordViewController:didFinishRecordingAtPath:)]) {
+            [self.delegate recordViewController:self didFinishRecordingAtPath:[self testFilePathURL]];
+        }
     }
     self.isRecording = (BOOL)[sender isOn];
     self.recordingTextField.text = self.isRecording ? @"Recording" : @"Not Recording";

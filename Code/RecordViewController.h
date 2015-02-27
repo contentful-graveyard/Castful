@@ -17,7 +17,19 @@
 // By default this will record a file to the application's documents directory (within the application's sandbox)
 #define kAudioFilePath @"EZAudioTest.m4a"
 
+@class RecordViewController;
+
+@protocol RecordViewControllerDelegate <NSObject>
+
+-(void)recordViewController:(RecordViewController*)recordViewController didFinishRecordingAtPath:(NSURL*)fileURL;
+
+@end
+
+#pragma mark -
+
 @interface RecordViewController : UIViewController <AVAudioPlayerDelegate,EZMicrophoneDelegate>
+
+@property (nonatomic, weak) id<RecordViewControllerDelegate> delegate;
 
 /**
  Use a OpenGL based plot to visualize the data coming in
