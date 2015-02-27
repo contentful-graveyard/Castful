@@ -61,6 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RecordViewControllerDeleg
                 callback(url)
             } else {
                 NSLog("Temporary file upload error: %@", error)
+
+                MMProgressHUD.dismiss()
             }
         }, progressHandler: nil)
     }

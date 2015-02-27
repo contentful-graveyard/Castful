@@ -36,7 +36,7 @@ PODS:
     - LatoFont
   - EDColor (1.0.0)
   - EZAudio (0.0.6)
-  - IAmUpload (0.3.1):
+  - IAmUpload (HEAD based on 0.3.1):
     - AFNetworking (~> 2.5)
   - ISO8601DateFormatter (0.7)
   - Keys (1.0.1)
@@ -48,7 +48,7 @@ DEPENDENCIES:
   - ContentfulLogin (from `git@github.com:contentful/contentful-ios-login.git`)
   - ContentfulManagementAPI (HEAD)
   - EZAudio
-  - IAmUpload
+  - IAmUpload (HEAD)
   - Keys (from `https://github.com/ashfurrow/empty-podspec.git`)
 
 EXTERNAL SOURCES:
