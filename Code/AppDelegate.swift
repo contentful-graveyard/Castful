@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RecordViewControllerDeleg
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "spaceSelected:", name: CDASpaceChangedNotification, object: nil)
 
+        UIView.appearance().tintColor = UIColor(red: 0.984, green: 0.71, blue: 0.365, alpha: 1.0)
+
         board = UIStoryboard(name: "Storyboard", bundle: nil)
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()

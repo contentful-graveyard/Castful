@@ -15,6 +15,7 @@
 		A1E3C5631AA0983A0069C998 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E3C5621AA0983A0069C998 /* Storyboard.storyboard */; };
 		A1E3C5651AA0989B0069C998 /* StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E3C5641AA0989B0069C998 /* StoryboardIdentifiers.swift */; };
 		A1E3C5671AA0BDA00069C998 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E3C5661AA0BDA00069C998 /* WebViewController.swift */; };
+		A1E3C5691AA0C1700069C998 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E3C5681AA0C1700069C998 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A1E3C5621AA0983A0069C998 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		A1E3C5641AA0989B0069C998 /* StoryboardIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiers.swift; sourceTree = "<group>"; };
 		A1E3C5661AA0BDA00069C998 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		A1E3C5681AA0C1700069C998 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				A1B5E7701AA079C2005B32FE /* Images.xcassets */,
 				A1B5E7721AA079C2005B32FE /* LaunchScreen.xib */,
+				A1E3C5681AA0C1700069C998 /* logo.png */,
 				A1E3C5621AA0983A0069C998 /* Storyboard.storyboard */,
 			);
 			path = Resources;
@@ -174,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E3C5691AA0C1700069C998 /* logo.png in Resources */,
 				A1B5E7741AA079C2005B32FE /* LaunchScreen.xib in Resources */,
 				A1B5E7711AA079C2005B32FE /* Images.xcassets in Resources */,
 				A1E3C5631AA0983A0069C998 /* Storyboard.storyboard in Resources */,
