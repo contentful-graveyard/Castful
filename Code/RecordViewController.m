@@ -86,6 +86,13 @@
   self.playButton.hidden = YES;
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    [self.microphone stopFetchingAudio];
+    [self.recorder closeAudioFile];
+}
+
 #pragma mark - Actions
 -(void)playFile:(id)sender
 {
