@@ -1,7 +1,7 @@
-plugin 'cocoapods-keys', {
-  :project => 'Castful',
-  :keys => [ 'ManagementOAuthClientId' ]
-}
+#plugin 'cocoapods-keys', {
+#  :project => 'Castful',
+#  :keys => [ 'ManagementOAuthClientId' ]
+#}
 
 source 'https://github.com/CocoaPods/Specs'
 source 'https://github.com/contentful/CocoaPodsSpecs'

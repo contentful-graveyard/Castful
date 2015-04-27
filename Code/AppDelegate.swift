@@ -40,11 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RecordViewControllerDeleg
     }
 
     func spaceSelected(note: NSNotification) {
-        selectedAccessToken = note.userInfo?[CDAAccessTokenKey] as String
-        selectedSpace = note.userInfo?[CDASpaceIdentifierKey] as String
+        selectedAccessToken = note.userInfo?[CDAAccessTokenKey] as! String
+        selectedSpace = note.userInfo?[CDASpaceIdentifierKey] as! String
 
-        let nav = window?.rootViewController as UINavigationController
-        let recordVC = board?.instantiateViewControllerWithIdentifier(ViewControllerStoryboardIdentifier.RecordViewController.rawValue) as RecordViewController
+        let nav = window?.rootViewController as! UINavigationController
+        let recordVC = board?.instantiateViewControllerWithIdentifier(ViewControllerStoryboardIdentifier.RecordViewController.rawValue) as! RecordViewController
         recordVC.delegate = self
         recordVC.title = "Recording"
         nav.pushViewController(recordVC, animated: true)
@@ -100,8 +100,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RecordViewControllerDeleg
                                         web.title = "Dat Website"
                                         web.loadURL(NSURL(string: "https://assets.contentful.com/crvcnjrd7aj2/25yupHorJGkey6cuE82EEO/966df7fb945414b77493d81dcc6fe1d2/index.html")!)
 
-                                        let nav = self.window?.rootViewController as UINavigationController
-                                        nav.pushViewController(web, animated: true)
+                                        let nav = self.window?.rootViewController as? UINavigationController
+                                        nav!.pushViewController(web, animated: true)
                                     }, failure: failure)
                                     return
                                 })
